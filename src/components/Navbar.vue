@@ -5,6 +5,8 @@
       <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/produk">Produk</router-link></li>
       <li><router-link to="/kategori">Kategori</router-link></li>
+      <li><router-link to="/login">Login</router-link></li>
+      <li><router-link to="/register">Register</router-link></li>
     </ul>
   </template>
   

@@ -1,12 +1,7 @@
 <template>
-    <center><br>
-        <div v-if="detail == underfined">NOT FOUND <br>404</div>
-        <div v-else>
-            <h1>Detail {{ detail.nama }}</h1>
-            <img :src="getImgSrc(kategori.img)" alt="Category Image" />
-            <h4>Harga : {{ detail.harga }}</h4>
-        </div>
-</center>
+    <h1>Detail {{ detail.nama }}</h1>
+    <img :src="getImgSrc(detail.img)" alt="Category Image" />
+    <h4>Harga : {{ detail.harga }}</h4>
 </template>
 <script>
 import { produk } from '@/assets/Produk'
@@ -17,12 +12,13 @@ export default {
     ],
     setup(props)
     {
-        const detail = produk["produk"].find(function (item) {
-            return item.id == props.id_produk;
-        });
         const getImgSrc = (imgFileName) => {
       return '../src/assets/img/' + imgFileName + '';
      };
+
+        const detail = produk["produk"].find(function (item) {
+            return item.id == props.id_produk;
+        });
         return {
             detail,
             getImgSrc
