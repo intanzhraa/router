@@ -7,6 +7,8 @@
       <li><router-link to="/kategori">Kategori</router-link></li>
       <li><router-link to="/login">Login</router-link></li>
       <li><router-link to="/register">Register</router-link></li>
+      <li><router-link to="/counter">Counter</router-link></li>
+      <li><router-link to="/todo">Todo</router-link></li>
     </ul>
   </template>
   
